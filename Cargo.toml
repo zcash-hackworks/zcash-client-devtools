@@ -1,0 +1,20 @@
+[package]
+name = "zcash-devtools"
+version = "0.1.0"
+authors = ["Kevin Gorham <kevin.gorham@electriccoin.co>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+failure = "0.1"
+tiny-bip39 = "0.8.0"
+zcash_primitives = "0.5"
+zcash_client_sqlite = "0.3"
+zcash_client_backend = "0.5"
+
+
+[patch.crates-io]
+zcash_primitives = { path = '../../clones/librustzcash/zcash_primitives' }
+zcash_client_sqlite = { path = '../../clones/librustzcash/zcash_client_sqlite' }
+zcash_client_backend = { path = '../../clones/librustzcash/zcash_client_backend' }
